@@ -1,0 +1,28 @@
+
+
+Fizzbuzz is a programming problem thats often used to filter out poor programmers in job interviews.
+In the spirit of Enterprise Fizz Buzz, I thought it would be funny to produce some silly solutions.
+Ive tried to do something "interesting" for each solution. 
+You would never use these as real solutions to fizzbuzz, but they might be worthwhile as demonstrations of other techniques.
+
+ mpl_fizzbuzz
+ ------------
+  templates generate a function that prints output to fizzbuzz between N and M.
+  No calculations done at runtime. No looping.
+  "A decent compiler could inline it all into one long function"
+  Of course MSVC doesnt do this. It inlines small ranges though.
+  
+ pp_fizzbuzz
+ -----------
+  Uses the C preprocessor to expand and print the solution at compile time.
+  (I use msvc's #pragma message("blah") to print the message at compile time)
+ 
+ pp_codegen_fizzbuzz
+ -------------------
+  Like above. Uses the C preprocessor to expand to a function that prints the solution.
+  Again no calculations or looping done at runtime.
+  You can even use the debugger to step through it. (If you are using msvc its easier to follow when viewing disassembly)
+  Kind of like a poor mans code generator...
+  
+  
+  
